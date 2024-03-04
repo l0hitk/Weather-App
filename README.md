@@ -22,4 +22,5 @@ This mini project is designed to show real-time weather information for a specif
 ## Weather API
 For this project, we have used the OpenWeatherMap API (https://openweathermap.org/api) to retrieve the current weather data.
 
-## [Preview](https://l0hitk.github.io/Weather-App/)
+## Preview
+[Link](https://l0hitk.github.io/Weather-App/)
