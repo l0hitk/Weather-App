@@ -45,15 +45,6 @@
         const searchBtn =document.querySelector(".search button");
         const weathericon =document.querySelector(".weather-icon");
 
-        var input = document.getElementById("myInput");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
-  }
-});
-
-
         async function checkweather(city){
             const respose= await fetch(apiUrl+ city +"&appid=6c0f0fb18360be29ecf41612c00d6b93");
             if(respose.status==404){
@@ -87,9 +78,18 @@ input.addEventListener("keypress", function(event) {
             document.querySelector(".error").style.display="none"
         }
     }    
+
+    var input = document.getElementById("myInput");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+        }
+    });
         searchBtn.addEventListener("click",()=>{
             checkweather(searchBox.value);
-        } )
+        } );
+
     </script>
 </body>
 </html>
